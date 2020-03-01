@@ -4,3 +4,6 @@
 [submodule "i3status"]
 	path = i3status
 	url = git@github.com:i3/i3status.git
+[submodule "i3lock"]
+	path = i3lock
+	url = git@github.com:i3/i3lock
