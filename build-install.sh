@@ -2,7 +2,7 @@
 
 dependencies() {
   echo "Installing dependencies..."
-  sudo apt-tget update
+  sudo apt-get update
   sudo apt-get install git build-essential gcc make autoconf pkg-config \
     libev-dev libstartup-notification0-dev libxcb-keysyms1-dev xmlto \
     libxkbcommon-x11-dev libyajl-dev libconfuse-dev libnl-genl-3-dev asciidoc
