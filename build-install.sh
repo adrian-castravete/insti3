@@ -5,14 +5,19 @@ dependencies() {
   sudo apt-get update
 
   # needed
-  sudo apt-get install git build-essential gcc make autoconf pkg-config \
-    libev-dev libstartup-notification0-dev libxcb-keysyms1-dev libpam0g-dev \
-    libxkbcommon-x11-dev libyajl-dev libconfuse-dev libnl-genl-3-dev \
+  sudo apt-get install --no-install-recommends -y git build-essential gcc make \
+    autoconf pkg-config libev-dev libstartup-notification0-dev \
+    libxcb-keysyms1-dev libpam0g-dev libxkbcommon-x11-dev libyajl-dev \
+    libconfuse-dev libnl-genl-3-dev libxcb1-dev libxcb-xkb-dev \
+    libxcb-cursor-dev libxcb-xinerama0-dev libxcb-randr0-dev libxcb-shape0-dev \
+    libxcb-util0-dev libxcb-icccm4-dev libxcb-xrm-dev libpulse-dev \
+    libcairo-dev libpango1.0-dev libasound-dev \
     asciidoc xmlto
 
   # my changes
-  sudo apt-get install lxterminal dmenu dunst arandr xfce4-settings \
-    xfce4-screenshooter xfce4-taskmanager xfce4-power-manager pnmixer feh
+  sudo apt-get install --no-install-recommends rxvt-unicode-256color dmenu \
+    dunst arandr xfce4-screenshooter lxtask xfce4-power-manager pnmixer feh \
+    sxiv sxhkd lxappearance
 }
 
 git_submodules() {
@@ -24,11 +29,11 @@ build() {
   name=$1
   echo "Building $name..."
   cd $name
-  autoreconf -fi
-  mkdir -p build
-  cd build
-  ../configure
-  make -j8
+  autoreconf -fi &&
+  mkdir -p build &&
+  cd build &&
+  ../configure &&
+  make -j8 || exit 1
   cd ../..
 }
 
@@ -36,7 +41,7 @@ install() {
   name=$1
   echo "Installing $name..."
   cd $name/build
-  sudo make install
+  sudo make install || exit 1
   cd ..
   rm -r build
   cd ..
