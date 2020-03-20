@@ -17,7 +17,7 @@ dependencies() {
   # my changes
   sudo apt-get install --no-install-recommends rxvt-unicode-256color dmenu \
     dunst arandr xfce4-screenshooter lxtask xfce4-power-manager pnmixer feh \
-    sxiv sxhkd lxappearance
+    sxiv sxhkd lxappearance pcmanfm file-roller p7zip-full
 }
 
 git_submodules() {
