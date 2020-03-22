@@ -6,7 +6,7 @@ dependencies() {
 
   # needed
   sudo apt-get install --no-install-recommends -y git build-essential gcc make \
-    autoconf pkg-config libev-dev libstartup-notification0-dev \
+    autoconf automake pkg-config libev-dev libstartup-notification0-dev \
     libxcb-keysyms1-dev libpam0g-dev libxkbcommon-x11-dev libyajl-dev \
     libconfuse-dev libnl-genl-3-dev libxcb1-dev libxcb-xkb-dev \
     libxcb-cursor-dev libxcb-xinerama0-dev libxcb-randr0-dev libxcb-shape0-dev \
