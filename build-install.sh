@@ -32,7 +32,7 @@ build() {
   autoreconf -fi &&
   mkdir -p build &&
   cd build &&
-  ../configure &&
+  ../configure --disable-sanitizers &&
   make -j8 || exit 1
   cd ../..
 }
