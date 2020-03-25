@@ -12,12 +12,12 @@ dependencies() {
     libxcb-cursor-dev libxcb-xinerama0-dev libxcb-randr0-dev libxcb-shape0-dev \
     libxcb-util0-dev libxcb-icccm4-dev libxcb-xrm-dev libpulse-dev \
     libcairo-dev libpango1.0-dev libasound-dev \
-    asciidoc xmlto gpm
+    asciidoc xmlto gpm curl
 
   # my changes
   sudo apt-get install --no-install-recommends rxvt-unicode-256color dmenu \
     dunst arandr xfce4-screenshooter lxtask xfce4-power-manager pnmixer feh \
-    sxiv sxhkd lxappearance pcmanfm file-roller p7zip-full lxterminal
+    sxiv sxhkd lxappearance pcmanfm file-roller p7zip-full lxterminal surf
 }
 
 git_submodules() {
